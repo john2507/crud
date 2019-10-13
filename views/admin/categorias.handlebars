@@ -1,0 +1,29 @@
+<br>
+ <h3>LISTAR CATEGORIAS</h3>
+<a href="/admin"><button class="btn btn-success">Retornar</button></a>
+<a href ="/admin/categorias/add"><button class="btn btn-success  ">Nova Categoria</button></a> 
+{{#each listar}}
+
+<div class="card mt-4">
+    <div class="card-body">
+    ID:{{id}}<br>
+    nome:{{nome}}<br>
+    slog:{{slug}}<br>
+    cadastrado:{{#formatDate createdAt}}{{/formatDate}}<br>
+    </div>
+   
+    </div>
+    
+    <a href = "/admin/categorias/edit/{{id}}"><button class="btn btn-primary mt-2">Editar Categoria</button></a> 
+    <a href= "/admin/del-categoria/{{id}}"><button class="btn btn-danger mt-2">Apagar Categoria</button></a>
+    <hr>
+{{else}}
+<h4 class="mt-3">Nenhuma categoria Registrada</h4>
+
+{{/each}}
+ 
+
+
+{{!-- <h2>LISTA DE CATEGORIAS</h2>
+<hr>
+<a href="/admin/categorias/add"><button class="btn btn-success">Nova Categoria</button></a> --}}

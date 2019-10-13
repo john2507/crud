@@ -1,0 +1,14 @@
+
+
+<h1>LISTAR FUNCIONARIOS</h1>
+
+
+{{#each funcionarios}}
+    ID:{{id}}<br>
+    nome:{{nome}}<br>
+    email:{{email}}<br>
+    senha:{{senha}}<br>
+    cadastrado:{{#formatDate createdAt}}{{/formatDate}}<br>
+    <a href = "/del-funcionario/{{id}}"><button>Apagar Funcionario</button></a>
+    <hr>
+{{/each}}
